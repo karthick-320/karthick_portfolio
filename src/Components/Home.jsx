@@ -41,17 +41,18 @@ const Home = () => {
               <span className="highlight-name">{typedText}</span>
             </h2>
             <p className="intro-text">
-              I’m Karthick — a developer who turns ideas into interactive
-              experiences.I enjoy creating things that live on the web and make
-              people go “wow.”
+              My interest lies in building thoughtful, interactive experiences
+              on the web.
             </p>
             <button
               className="download-btn"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/resume.pdf";
+                link.href = `${import.meta.env.BASE_URL}resume.pdf`; // ✅ correct relative path
                 link.download = "Karthick_Resume.pdf";
+                document.body.appendChild(link); // safe in some browsers
                 link.click();
+                document.body.removeChild(link);
               }}
             >
               Download CV

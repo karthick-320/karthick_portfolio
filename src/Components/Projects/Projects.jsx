@@ -3,14 +3,16 @@ import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import "./Projects.css";
 import udemyThumbnail from "../../assets/Projects/udemy1.png";
-import udemyimage1 from "../../assets/Projects/udemy2.png";
+import udemyimage1 from "../../assets/Projects/udemy2_.png";
 import tripadvisorThumbnail from "../../assets/Projects/trip1.png";
 import tripadvisorimage1 from "../../assets/Projects/trip2.png";
+import nostra1 from "../../assets/Projects/nostra1.png";
+import nostra2 from "../../assets/Projects/nostra2.png";
 
 const sampleProjects = [
   {
     title: "Udemy - Online Learning (CLONE)",
-    category: "Web | Mobile",
+    category: "Web",
     shortDesc:
       "A mobile-responsive static UI clone of the Udemy learning platform, built to replicate its design and layout.",
     description:
@@ -24,19 +26,32 @@ const sampleProjects = [
   },
   {
     title: "TripAdvisor - Travel Guide (CLONE)",
-    category: "Web | Mobile",
+    category: "Web",
     shortDesc:
       "A static, mobile-responsive UI clone of TripAdvisor's travel platform, focused on layout and visual design.",
     description:
       "This project is a static front-end clone of the TripAdvisor website. It replicates the visual structure, design aesthetics, and responsive behavior of the original site. The project emphasizes clean layout techniques, responsiveness across device sizes, and UI consistency. It does not include any backend functionality but showcases front-end design skills.",
     thumbnail: tripadvisorThumbnail,
-    image: tripadvisorimage1,
+    image: tripadvisorThumbnail,
     video: "", // or "bonza-preview.mp4"
     tech: "HTML,CSS,",
     url: "https://karthick-34.github.io/tripadvisor-clone/",
     github: "https://github.com/karthick-34/tripadvisor-clone",
   },
-
+  {
+    title: "Nostra - Fashion E-commerce Page",
+    category: "Web",
+    shortDesc:
+      "A responsive fashion e-commerce page featuring brand highlights, product showcases, and searching products",
+    description:
+      "Nostra is a static front-end project that emulates a modern fashion e-commerce homepage. Built with HTML, CSS and JS, it features sections like New Arrivals, Most Wanted, and promotional offers. The design emphasizes responsiveness, clean layout, and visual appeal, providing a seamless user experience across devices.",
+    thumbnail: nostra1,
+    image: nostra2,
+    video: "",
+    tech: "HTML, CSS",
+    url: "https://karthick-34.github.io/Nostra/",
+    github: "https://github.com/karthick-34/Nostra",
+  },
 ];
 
 const Projects = () => {

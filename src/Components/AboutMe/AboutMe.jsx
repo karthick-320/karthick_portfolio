@@ -58,22 +58,22 @@ const AboutMe = () => {
             More Than Just <span className="highlight">Code</span> – Here’s Who{" "}
             <span className="highlight">I Am</span>
           </h2>
-          <p className="tagline">
+          {/* <p className="tagline">
             Get to know the developer who loves design, performance, and problem
             solving.
+          </p> */}
+          <p>
+            I’m not just another Full Stack Developer — I’m someone who blends
+            creative UI design, snappy performance, and clean code into seamless
+            digital experiences. Driven by curiosity and a love for building
+            meaningful projects, I keep experimenting, learning, and solving
+            problems — one bug at a time. My strength? Bridging logic with
+            design.
           </p>
           <p>
-            I'm a passionate Full Stack Developer with a interest in building
-            performance-driven web applications. My passion for creating
-            attractive UI and efficient backend systems has fueled a consistent
-            journey of learning and experimentation.
-          </p>
-          <p>
-            Alongside web development, I actively practice Data Structures and
-            Algorithms to sharpen my logical thinking and problem-solving
-            abilities. I believe that combining a strong foundation in DSA with
-            real-world project experience is the key to becoming a well-rounded
-            developer.
+            I also actively sharpen my brain with Data Structures and
+            Algorithms, combining real-world projects with strong fundamentals
+            to stay ahead of the curve.
           </p>
           <div className="details">
             <p>

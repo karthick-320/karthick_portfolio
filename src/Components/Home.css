@@ -122,6 +122,10 @@ body {
   margin-right: 200px;
 }
 
+.image-card {
+  margin-bottom: 2rem;
+}
+
 .image-card img {
   width: 300px;
   border-radius: 12px;
@@ -204,11 +208,11 @@ body {
   }
 
   .intro-heading {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
   .intro-text {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   .download-btn {
@@ -232,7 +236,6 @@ body {
   }
 }
 
-
 .download-btn {
   padding: 0.6rem 1.2rem;
   border: 2px solid #000;
@@ -251,3 +254,26 @@ body {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* @media (max-width: 768px) {
+  .intro-heading {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .highlight-name {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    margin: 0.8rem 0;
+    color: #444;
+    padding: 0 1rem;
+  }
+
+  .left-content {
+    padding: 0 1rem;
+  }
+}
+ */
