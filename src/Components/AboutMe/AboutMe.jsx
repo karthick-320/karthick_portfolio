@@ -2,10 +2,30 @@ import React from "react";
 import "./AboutMe.css";
 
 const skills = [
-  { name: "Photoshop", percent: 87, color: "#F26464" },
-  { name: "Javascript", percent: 80, color: "#F26464" },
-  { name: "HTML5/CSS3", percent: 95, color: "#7D5FFF" },
-  { name: "React", percent: 70, color: "#F26464" },
+  {
+    name: "AWS",
+    percent: 10,
+    color: "#F26464",
+    point: "Used Lambda, DynamoDB & Bedrock in full-stack projects.",
+  },
+  {
+    name: "JavaScript",
+    percent: 80,
+    color: "#F26464",
+    point: "Structured clean, modular JS code in multi-page web projects.",
+  },
+  {
+    name: "HTML/CSS",
+    percent: 95,
+    color: "#7D5FFF",
+    point: "Cloned real-world UIs like Udemy with responsive HTML/CSS.",
+  },
+  {
+    name: "React",
+    percent: 70,
+    color: "#F26464",
+    point: "Developed dynamic UIs using React and reusable components.",
+  },
 ];
 
 const AboutMe = () => {
@@ -47,7 +67,7 @@ const AboutMe = () => {
                 <div className="progress-text">{skill.percent}%</div>
               </div>
               <h3>{skill.name}</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing.</p>
+              <p>{ }{skill.point}</p>
             </div>
           ))}
         </div>
