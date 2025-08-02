@@ -22,8 +22,8 @@ const sampleProjects = [
     image: eventPlannerImage, // replace with your detailed preview image import
     video: "", // or a demo video link like "eventplanner-demo.mp4"
     tech: "React, AWS Lambda, DynamoDB, Amazon Bedrock, HTML, CSS, JavaScript",
-    url: "https://karthick-34.github.io/eventplanneraws",
-    github: "https://github.com/karthick-34/eventplanneraws",
+    url: "https://karthick-320.github.io/eventplanneraws",
+    github: "https://github.com/karthick-320/eventplanneraws",
   },
   {
     title: "Udemy - Online Learning (CLONE)",
@@ -36,8 +36,8 @@ const sampleProjects = [
     image: udemyimage1,
     video: "", // or "bonza-preview.mp4"
     tech: "HTML,CSS",
-    url: "https://karthick-34.github.io/udemy-clone/",
-    github: "https://github.com/karthick-34/udemy-clone",
+    url: "https://karthick-320.github.io/udemy-clone/",
+    github: "https://github.com/karthick-320/udemy-clone",
   },
   {
     title: "TripAdvisor - Travel Guide (CLONE)",
@@ -50,8 +50,8 @@ const sampleProjects = [
     image: tripadvisorThumbnail,
     video: "", // or "bonza-preview.mp4"
     tech: "HTML,CSS",
-    url: "https://karthick-34.github.io/tripadvisor-clone/",
-    github: "https://github.com/karthick-34/tripadvisor-clone",
+    url: "https://karthick-320.github.io/tripadvisor-clone/",
+    github: "https://github.com/karthick-320/tripadvisor-clone",
   },
   {
     title: "Nostra - Fashion E-commerce Page",
@@ -64,8 +64,8 @@ const sampleProjects = [
     image: nostra2,
     video: "",
     tech: "HTML, CSS",
-    url: "https://karthick-34.github.io/Nostra/",
-    github: "https://github.com/karthick-34/Nostra",
+    url: "https://karthick-320.github.io/Nostra/",
+    github: "https://github.com/karthick-320/Nostra",
   },
 ];
 
