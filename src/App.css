@@ -11,9 +11,3 @@ body::-webkit-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-.highlight {
-  color: #F26464;
-  font-weight: bold;
-    font-size: 48px;
-}

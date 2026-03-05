@@ -9,7 +9,7 @@ const ProjectCard = ({ project, onClick }) => {
       <img src={project.thumbnail} alt={project.title} />
       <div className="meta">
         <p>
-          <strong>Tech:</strong> {project.tech}
+          <strong>Tech Stack :</strong> {project.tech}
         </p>
       </div>
     </div>

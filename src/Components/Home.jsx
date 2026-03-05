@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import blackImage from "../assets/black.jpeg";
-import whiteImage from "../assets/white.jpeg"; // your hover image
+import whiteImage from "../assets/white.jpeg"; 
 import Navbar from "./Navbar/Navbar";
 import AboutMe from "./AboutMe/AboutMe";
 import Portfolio from "./Projects/Projects";
@@ -9,8 +9,8 @@ import Portfolio from "./Projects/Projects";
 const Home = () => {
   const fullText = "Karthick Sri Ram";
   const [typedText, setTypedText] = useState("");
-  const [currentImage, setCurrentImage] = useState(blackImage);
   const indexRef = useRef(0);
+  const projectsRef = useRef(null);
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -32,39 +32,54 @@ const Home = () => {
         <Navbar />
       </div>
 
-      <section className="home-section">
+      <section id="profile" className="home-section">
         <div className="home-container">
           <div className="left-content">
             <h2 className="intro-heading">
-              My Self,
+              Hi, I'm
               <br />
               <span className="highlight-name">{typedText}</span>
             </h2>
             <p className="intro-text">
-              My interest lies in building thoughtful, interactive experiences
-              on the web.
+              A Full Stack Developer who enjoys solving backend challenges and
+              shaping clean frontend experiences. I work across React, Node.js,
+              Spring Boot, and SQL databases to develop performant, API-driven
+              applications with clean architecture and maintainable codebases.
             </p>
-            <button
-              className="download-btn"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = `${import.meta.env.BASE_URL}resume.pdf`; // ✅ correct relative path
-                link.download = "Karthick_Resume.pdf";
-                document.body.appendChild(link); // safe in some browsers
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              Download CV
-            </button>
+
+            {/* Credibility Line */}
+            {/* <p className="credibility-text">
+              Final-Year CSE | Aspiring SDE-1 | MERN Stack • Java • SQL
+            </p> */}
+            <div className="header_button">
+              <button
+                className="download-btn"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = `${import.meta.env.BASE_URL}resume.pdf`; // ✅ correct relative path
+                  link.download = "Karthick_Resume.pdf";
+                  document.body.appendChild(link); // safe in some browsers
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                Download CV
+              </button>
+              <button
+                className="secondary-btn"
+                onClick={() =>
+                  projectsRef.current?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                View Projects
+              </button>
+            </div>
           </div>
 
           <div className="right-content">
             <div
               className="image-card"
-              onMouseEnter={() => setCurrentImage(whiteImage)}
               onMouseLeave={(e) => {
-                setCurrentImage(blackImage);
                 e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
               }}
               onMouseMove={(e) => {
@@ -81,7 +96,7 @@ const Home = () => {
                 card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
               }}
             >
-              <img src={currentImage} alt="Karthick" />
+              <img src={whiteImage} alt="Karthick" />
             </div>
 
             {/* <div className="right-role">
@@ -98,7 +113,7 @@ const Home = () => {
         </div> */}
       </section>
       <AboutMe />
-      <Portfolio />
+      <Portfolio ref={projectsRef} />
     </div>
   );
 };

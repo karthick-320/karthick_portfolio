@@ -1,0 +1,30 @@
+
+
+/* Ensure interactive elements also hide the default cursor */
+a, button, input, textarea {
+  cursor: none;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffc107; /* Swap to #00ffcc if you want the cyan from the video */
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Crucial: lets you click THROUGH the cursor div */
+  z-index: 9999;
+}
+
+.cursor-outline {
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(255, 193, 7, 0.4); /* Matches the dot, but with opacity */
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+}

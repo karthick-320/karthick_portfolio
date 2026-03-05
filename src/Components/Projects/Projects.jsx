@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import "./Projects.css";
@@ -21,7 +21,7 @@ const sampleProjects = [
     thumbnail: eventPlannerImage, // replace with your thumbnail image import
     image: eventPlannerImage, // replace with your detailed preview image import
     video: "", // or a demo video link like "eventplanner-demo.mp4"
-    tech: "React, AWS Lambda, DynamoDB, Amazon Bedrock, HTML, CSS, JavaScript",
+    tech: "React, AWS Lambda, DynamoDB, Amazon Bedrock",
     url: "https://karthick-320.github.io/eventplanneraws",
     github: "https://github.com/karthick-320/eventplanneraws",
   },
@@ -69,25 +69,33 @@ const sampleProjects = [
   },
 ];
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section className="projects-section">
-      <h2>
-        My <span className="highlight">Code Stories</span>
-      </h2>
-      <div className="project-grid">
-        {sampleProjects.map((proj, i) => (
-          <ProjectCard key={i} project={proj} onClick={setSelectedProject} />
-        ))}
+    <section ref={ref} id="projects" className="projects-section">
+      <div className="project-vertical-wrapper">
+        <div className="project-vertical-text">
+          <h1>Projects</h1>
+          <div className="project-vertical-border"></div>
+        </div>
       </div>
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+      <div>
+        <h2>
+          My <span className="highlight">Code Stories</span>
+        </h2>
+        <div className="project-grid">
+          {sampleProjects.map((proj, i) => (
+            <ProjectCard key={i} project={proj} onClick={setSelectedProject} />
+          ))}
+        </div>
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      </div>
     </section>
   );
-};
+});
 
 export default Projects;

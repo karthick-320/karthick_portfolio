@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ProjectModal.css";
 
 const ProjectModal = ({ project, onClose }) => {
+  useEffect(() => {
+    if (project) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [project]);
+
   if (!project) return null;
 
   return (
@@ -11,7 +23,7 @@ const ProjectModal = ({ project, onClose }) => {
           X
         </button>
         <h2>{project.title}</h2>
-        <p>{project.description}</p>
+        <p className="modal-content-description">{project.description}</p>
 
         {project.video ? (
           <video controls src={project.video} />
